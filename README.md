@@ -8,7 +8,7 @@
 > A note about local and global NPM packages. It is consider good practice to install packages locally. However, at the University, I have had some problems doing this. Therefore, the following instructions use global packages.
 
 ## Setting up a Node.js project
-* Using the Node.js Command Prompt navigate to the root of the *build-tools* folder.
+* Using the Node.js Command Prompt navigate to the root of the project folder (where the README.md file is).
 
 * Create a new Node.js project:
 

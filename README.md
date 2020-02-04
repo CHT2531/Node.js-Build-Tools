@@ -5,10 +5,10 @@
 
 > A note about 'slash' characters. When using the Command Prompt or terminal, most operating systems use a forward slash between filenames e.g. *node_modules/bin/lessc*. Windows use a backslash i.e. *node_modules\bin\lessc*. The backslash character is also the escape character so if we have a file path as part of a string we write "node_modules\\\\bin\\\\lessc". The following instructions are written for windows. If you are using a Mac, use single forward slashes instead.
 
-> A note about local and global NPM packages. It is consider good practice to install packages locally. However, at the University, I have had some problems doing this. Therefore, the following instructions use global packages.
+> A note about local and global NPM packages. It is consider good practice to install packages locally. However, at the University, I have had sometimes had problems doing this.
 
 ## Setting up a Node.js project
-* Using the Node.js Command Prompt navigate to the root of the *build-tools* folder.
+* Using the Node.js Command Prompt navigate to the root of the project folder (where the README.md file is).
 
 * Create a new Node.js project:
 
@@ -28,7 +28,7 @@ npm install node-sass --save-dev
 
 ```
 
-This install the node-sass package.
+This installs the *node-sass* package.
 
 Check this has worked by doing the following:
 
@@ -70,9 +70,9 @@ npm run sass
 
 
 ## Creating a build version
-A build version is simply a version of your site that is ready to be used by users. A build version of the site will differ from your developer version in a number of ways. For example, a build version will contain minified files and compressed images to make the pages load as fast as possible. We will do a simple example that minifies our CSS.
+A build version is simply a version of your site that is ready to be used by end users. A build version of the site will differ from your developer version in a number of ways. For example, a build version will contain minified files and compressed images to make the pages load as fast as possible. We will do a simple example that minifies our CSS.
 
-We are going to put our build version in the folder named *dist*.
+We are going to put our build version in a folder named *dist*.
 
 Add the following *make-dist* script
 ```
@@ -114,7 +114,7 @@ cleancss  "./src/css/style.css" -o "./src/css/style.min.css"
 ```
 * Open the file *style.min.css*, see how the CSS has been minified.
 
-* Next, we'll add this as a script that will take the CSS file from the *src* folder, minify it and put it into the *dist* folder. Add the followinf *move-css* script to your *package.json* file.
+* Next, we'll add this as a script that will take the CSS file from the *src* folder, minify it and put it into the *dist* folder. Add the following *move-css* script to your *package.json* file.
 
 ```
   "scripts": {
@@ -137,7 +137,7 @@ npm run move-css
 ### Creating a clean script
 When we create a new *dist* version of our site, we want to delete the existing one. We can do this with a *clean* script that will remove the *dist* folder.
 
-Change the package.json file to
+Change the package.json file to add a clean script.
 ```
   "scripts": {
     "sass":"node-sass ./src/sass/style.scss ./src/css/style.css -w",
@@ -150,7 +150,7 @@ Change the package.json file to
 
 * Open up the command prompt run the *clean* script.
 
-* Finally we will add a *build* command that will run *make-dist*, *move-html* and then run *move-css*.
+* Finally we will add a *build* command that will run *make-dist*, *move-html* and then run *move-css*. The && symbol allows use to chain a series of commands together. 
 
 ```
   "scripts": {

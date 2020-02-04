@@ -150,7 +150,7 @@ Change the package.json file to add a clean script.
 
 * Open up the command prompt run the *clean* script.
 
-* Finally we will add a *build* command that will run *make-dist*, *move-html* and then run *move-css*. The && symbol allows use to chain a series of commands together. 
+* Finally we will add a *build* command that will run *make-dist*, *move-html* and then run *move-css*. The && symbol allows use to chain a series of commands together.
 
 ```
   "scripts": {

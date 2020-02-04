@@ -1,0 +1,9 @@
+@import 'vars';
+
+body {
+  font: 100% $fontstack;
+  background-color:$primarycolor;
+}
+h1{
+  color:$secondcolor;
+}

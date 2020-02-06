@@ -75,13 +75,16 @@ A build version is simply a version of your site that is ready to be used by end
 We are going to put our build version in a folder named *dist*.
 
 Add the following *make-dist* script
+
 ```
 "scripts": {
     "sass":"node-sass ./src/sass/style.scss ./src/css/style.css -w",
     "make-dist":"mkdir dist\\css"
   },
 ```
+
 Open the command prompt and test it works:
+
 ```
 npm run make-dist
 ```
@@ -105,13 +108,17 @@ npm run move-html
 You should find that the *index.html* file has been moved into your *dist* folder. Next, we are going to put a minified copy of our CSS into the *dist* folder.
 
 * Install the *clean-css* package to minify our CSS
+
 ```
 npm install clean-css-cli -g
+```
 
 * Next, to see what it does, run it from the command prompt
+
 ```
 cleancss  "./src/css/style.css" -o "./src/css/style.min.css"
 ```
+
 * Open the file *style.min.css*, see how the CSS has been minified.
 
 * Next, we'll add this as a script that will take the CSS file from the *src* folder, minify it and put it into the *dist* folder. Add the following *move-css* script to your *package.json* file.

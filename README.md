@@ -24,7 +24,7 @@ You have now set up a Node.js project.
 Next we will install *node-sass* so that we can compile sass code in our project. Enter the following:
 
 ```
-npm install node-sass --save-dev
+npm install node-sass -g
 
 ```
 
@@ -106,8 +106,8 @@ You should find that the *index.html* file has been moved into your *dist* folde
 
 * Install the *clean-css* package to minify our CSS
 ```
-npm install clean-css-cli --save-dev
-```
+npm install clean-css-cli -g
+
 * Next, to see what it does, run it from the command prompt
 ```
 cleancss  "./src/css/style.css" -o "./src/css/style.min.css"
